@@ -1,0 +1,13 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Webinar Assistant | {{ title }}</title>
+        <link rel="shortcut icon" type="image/png" href="{% static 'assistant/images/favicon_w.ico' %}"/>
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
