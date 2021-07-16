@@ -4,10 +4,34 @@
     <head>
         <meta charset="UTF-8">
         <title>Webinar Assistant | {{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <script src="https://kit.fontawesome.com/79d5defeb1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'assistant/css/style.css' %}">
         <link rel="shortcut icon" type="image/png" href="{% static 'assistant/images/favicon_w.ico' %}"/>
     </head>
     <body>
-        {% block content %}
-        {% endblock %}
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__content">
+                    <a href="{% url 'home' %}" class="header-logo">Webinar Assistant</a>
+                    <nav class="nav-bar">
+                        <div class="nav__content">
+                            <a href="{% url 'tools' %}" class="nav__item">Инструменты</a>
+                            <a href="#" class="nav__item">Блок 2</a>
+                            <a href="#" class="nav__item">Блок 3</a>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <main class="main">
+                <div class="main__content">
+                    <div class="container">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                    
+                </div>
+            </main>
+        </div>
     </body>
 </html>

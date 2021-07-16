@@ -23,6 +23,7 @@ from assistant.views import page_not_found
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('assistant.urls')),
+    path('tools/', include('tools.urls'))
 ]
 
 handler404 = page_not_found
