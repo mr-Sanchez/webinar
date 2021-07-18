@@ -19,7 +19,6 @@ from django.urls import path
 from django.urls import include
 from assistant.views import page_not_found
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('assistant.urls')),
@@ -27,3 +26,4 @@ urlpatterns = [
 ]
 
 handler404 = page_not_found
+
