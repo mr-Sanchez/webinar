@@ -1,6 +1,24 @@
 {% extends 'assistant/base.html' %}
+{% load static %}
+
+{% block static_link %}
+    <script src="{% static 'tools/js/script.js' %}"></script>
+{% endblock %}
 
 {% block content %}
-    <h1>Hi!</h1>
-    <img src="{{ filepath.url }}" alt="picture" width="300px">
+    <div class="box box-full">
+        <div>
+            <h3>Подготовка Excel файлов для рассылки</h3>
+            <form action="" method="post" enctype="multipart/form-data" id="upload-form">
+                {% csrf_token %}
+                <input type="file" name="document" id="file-upload" hidden>
+                <label class="label-file-upload" for="file-upload">
+                    <span id="choose-file-text">Выбрать файл</span>
+                    <i class="fas fa-cloud-upload-alt" style="display: none;"></i>
+                </label>
+                <span id="file-chosen"></span>
+                <p><button class="btn-submit" type="button">Отправить</button></p>
+            </form>
+        </div>
+    </div>
 {% endblock %}

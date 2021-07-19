@@ -8,6 +8,8 @@
         <script src="https://kit.fontawesome.com/79d5defeb1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{% static 'assistant/css/style.css' %}">
         <link rel="shortcut icon" type="image/png" href="{% static 'assistant/images/favicon_w.ico' %}"/>
+        {% block static_link %}
+        {% endblock %}
     </head>
     <body>
         <div class="wrapper">
@@ -29,7 +31,6 @@
                         {% block content %}
                         {% endblock %}
                     </div>
-                    
                 </div>
             </main>
         </div>

@@ -30,7 +30,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1', 
     '192.168.0.103',
     'homepage',
-    '192.168.0.101'
+    '192.168.0.101',
+    '192.168.43.2'
 ]
 
 
@@ -131,7 +132,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#STATICFILES_DIRS = []
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
